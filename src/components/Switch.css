@@ -1,0 +1,11 @@
+main{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.background{
+    padding: 200px;
+    width:800px;
+    border: solid 4px black;
+}
