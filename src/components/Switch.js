@@ -3,29 +3,25 @@ import './Switch.css'
 
 const Switch = () => {
 
-    const [button, setButton] = useState('')
-    const [switcher, setSwitcher] = useState(false)
+    const [button, setButton] = useState('change to day')
+    const [switcher, setSwitcher] = useState(false) 
 
     const change = () => {
         setSwitcher(!switcher)
         if (!switcher) {
-            setSwitcher('change to night')
+            setButton('change to night')
+        } else {
+            setButton('change to day')
         }
-    }
 
-    const changeDay = () => {
-        setSwitcher(!switcher)
-        if(!switcher){
-            
-        }
     }
 
 
     return (
         <main>
             <div className='background' style={!switcher ? { backgroundColor: 'grey' } : { backgroundColor: 'white' }}>
-                <p style={!switcher? {text:'day'} : {text:'night'}}></p>
-                <button onClick={change}>change to day{switcher}</button>
+                <p></p>
+                <button onClick={change}>{button}</button>
             </div>
 
         </main>
